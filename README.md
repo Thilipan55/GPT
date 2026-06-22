@@ -16,3 +16,20 @@ This should be intersting as Thirukkural implicitly has strict syntax with 4 wor
 
 Log - 22/June
 I Scaled the parameters up from 50,000 to 930K parameters so almost a million, i trained it on a T4 instance in Colab and achved a loss -> 1.15025
+
+Now you can just
+```bash
+git clone https://github.com/Thilipan55/GPT.git
+cd GPT
+```
+
+```python
+model = Bigram(vocab_size).to(device)
+
+check = torch.load("checkpoint_80000.pt")
+model.load_state_dict(check["model_weights"])
+
+# and run infernce with
+print(decode((old_model.generate(torch.zeros((1, 1), dtype=torch.long, device=device), 500))[0].tolist()))
+```
+And run the model :)
