@@ -16,11 +16,13 @@ This should be intersting as Thirukkural implicitly has strict syntax with 4 wor
 
 Log - 22/June
 I Scaled the parameters up from 50,000 to 930K parameters so almost a million, i trained it on a T4 instance in Colab and achved a loss -> 1.15025
+Blog for more information -> https://scandalous-result-48a.notion.site/Scaling-GPT-2-Transformer-1-Million-3876add4fddd80c7b157c7facb08f31e
 
 Now you can just
 ```bash
 git clone https://github.com/Thilipan55/GPT.git
 cd GPT
+cd GPT-s1-scaled
 ```
 
 ```python
