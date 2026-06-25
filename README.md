@@ -13,6 +13,7 @@ This is a very samll model and it cant compess 1 million tokens into the model p
 The final goal is to scale up this model and train it on the Tamil literature: Thirukkural https://github.com/b1zantine/thirukkural-dataset/blob/master/thirukkural.txt
 This should be intersting as Thirukkural implicitly has strict syntax with 4 words on top and 3 in below
 
+---
 
 Log - 22/June
 I Scaled the parameters up from 50,000 to 930K parameters so almost a million, i trained it on a T4 instance in Colab and achved a loss -> 1.15025
@@ -35,3 +36,10 @@ model.load_state_dict(check["model_weights"])
 print(decode((old_model.generate(torch.zeros((1, 1), dtype=torch.long, device=device), 500))[0].tolist()))
 ```
 And run the model :)
+---
+Log - 25/June
+I am releasing Kural-1-mini today, This is an autoregressive decoder only transformer (same architecture as previous) and, it was only pretrained on thirukkural couplets, and the tokenizer is still (unfortunatley) only character level.
+
+Blog on Kural-1-mini and Kural-1-High -> https://scandalous-result-48a.notion.site/Kural-1-Family-of-models-3886add4fddd806b9dd7fb9b9752b08a
+
+The weights are also present in the repsository in /kural-1 and run the same command above to load the model weights and run inference.
