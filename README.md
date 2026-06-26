@@ -43,3 +43,7 @@ I am releasing Kural-1-mini today, This is an autoregressive decoder only transf
 Blog on Kural-1-mini and Kural-1-High -> https://scandalous-result-48a.notion.site/Kural-1-Family-of-models-3886add4fddd806b9dd7fb9b9752b08a
 
 The weights are also present in the repsository in /kural-1 and run the same command above to load the model weights and run inference.
+
+Log - 26/Jun
+I am releasing Kural-1-high this is a scaled version of the same model as above
+I lost the weights so only code is there :( ,thanks a lot colab runtime
